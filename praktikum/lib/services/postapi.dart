@@ -9,7 +9,7 @@ class PostApi {
   Future<List<Post>> fetchPosts() async {
     final response = await http.get(
       Uri.parse(_baseUrl),
-      headers: {'Authorization': 'Bearer API_CRYiIec4afpEMqoKuSAnmGJKb96xfDnn'},
+      headers: {'Authorization': 'Bearer API_1QoJi28zejNsRzaFBERYvw2O4UI1K1nA'},
     );
 
     print('Fetch Posts Response: ${response.statusCode} - ${response.body}');
@@ -47,7 +47,7 @@ class PostApi {
       Uri.parse(_baseUrl),
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer API_CRYiIec4afpEMqoKuSAnmGJKb96xfDnn',
+        'Authorization': 'Bearer API_1QoJi28zejNsRzaFBERYvw2O4UI1K1nA',
       },
       body: jsonEncode(post.toJson()),
     );
@@ -78,7 +78,7 @@ class PostApi {
       Uri.parse('$_baseUrl/${post.id}'),
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer API_CRYiIec4afpEMqoKuSAnmGJKb96xfDnn',
+        'Authorization': 'Bearer API_1QoJi28zejNsRzaFBERYvw2O4UI1K1nA',
       },
       body: jsonEncode(post.toJson()),
     );
@@ -107,7 +107,7 @@ class PostApi {
   Future<void> deletePost(int id) async {
     final response = await http.delete(
       Uri.parse('$_baseUrl/$id'),
-      headers: {'Authorization': 'Bearer API_CRYiIec4afpEMqoKuSAnmGJKb96xfDnn'},
+      headers: {'Authorization': 'Bearer API_1QoJi28zejNsRzaFBERYvw2O4UI1K1nA'},
     );
 
     print('Delete Response: ${response.statusCode}');
