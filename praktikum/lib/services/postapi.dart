@@ -47,7 +47,7 @@ class PostApi {
       Uri.parse(_baseUrl),
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer <apiKey anda>',
+        'Authorization': 'Bearer API_CRYiIec4afpEMqoKuSAnmGJKb96xfDnn',
       },
       body: jsonEncode(post.toJson()),
     );
@@ -78,7 +78,7 @@ class PostApi {
       Uri.parse('$_baseUrl/${post.id}'),
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer <apiKey anda>',
+        'Authorization': 'Bearer API_CRYiIec4afpEMqoKuSAnmGJKb96xfDnn',
       },
       body: jsonEncode(post.toJson()),
     );
@@ -107,7 +107,7 @@ class PostApi {
   Future<void> deletePost(int id) async {
     final response = await http.delete(
       Uri.parse('$_baseUrl/$id'),
-      headers: {'Authorization': 'Bearer <apiKey anda>'},
+      headers: {'Authorization': 'Bearer API_CRYiIec4afpEMqoKuSAnmGJKb96xfDnn'},
     );
 
     print('Delete Response: ${response.statusCode}');
